@@ -1,0 +1,14 @@
+version: "3"
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    hostname: yourcoolhostname
+    environment:
+      - TS_AUTH_ONCE=true
+      - TS_HOSTNAME=yourcoolhostname
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_SERVE_CONFIG=/var/lib/tailscale/servConfig.json
+    volumes:
+      - ./tailscale:/var/lib/tailscale
+    restart: unless-stopped
+networks: {}

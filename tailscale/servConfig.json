@@ -1,0 +1,16 @@
+{
+  "TCP": {
+    "443": {
+      "HTTPS": true
+    }
+  },
+  "Web": {
+    "yourcoolhostname.yourtailnet.ts.net:443": {
+      "Handlers": {
+        "/": {
+          "Proxy": "http://whatever.you.wanttoforwa.rd:800"
+        }
+      }
+    }
+  }
+}
